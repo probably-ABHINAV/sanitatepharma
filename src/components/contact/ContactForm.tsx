@@ -70,7 +70,7 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-white rounded-[32px] p-8 md:p-12 shadow-card border border-gray-100 relative overflow-hidden">
+    <div className="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-12 shadow-card border border-gray-100 relative overflow-hidden">
       
       {/* Status Banners */}
       {status === 'success' && (

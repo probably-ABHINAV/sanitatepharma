@@ -72,7 +72,7 @@ export function FranchiseForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-[32px] p-8 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
+    <form onSubmit={handleSubmit} className="bg-white rounded-[24px] md:rounded-[32px] p-6 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal to-primary" />
       
       <h2 className="font-display text-3xl font-bold text-primary mb-2">Franchise Application</h2>

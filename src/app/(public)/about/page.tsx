@@ -123,22 +123,22 @@ export default async function AboutPage() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollFade delay={0.1}>
-              <div className="bg-primary rounded-[32px] p-10 sm:p-14 h-full flex flex-col items-start justify-center relative overflow-hidden shadow-xl">
+              <div className="bg-primary rounded-[24px] sm:rounded-[32px] p-6 sm:p-10 lg:p-14 h-full flex flex-col items-start justify-center relative overflow-hidden shadow-xl">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <Target className="w-12 h-12 text-tealLight mb-8" />
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">Our Vision</h2>
-                <p className="text-white/80 text-lg leading-relaxed">
+                <Target className="w-10 h-10 sm:w-12 sm:h-12 text-tealLight mb-6 sm:mb-8" />
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Our Vision</h2>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">
                   To become a trusted pharmaceutical brand recognized for quality, innovation, and commitment to improving healthcare outcomes across India.
                 </p>
               </div>
             </ScrollFade>
 
             <ScrollFade delay={0.2}>
-              <div className="bg-teal rounded-[32px] p-10 sm:p-14 h-full flex flex-col items-start justify-center relative overflow-hidden shadow-xl">
+              <div className="bg-teal rounded-[24px] sm:rounded-[32px] p-6 sm:p-10 lg:p-14 h-full flex flex-col items-start justify-center relative overflow-hidden shadow-xl">
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-                <Lightbulb className="w-12 h-12 text-white mb-8" />
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <ul className="text-white/90 text-lg leading-relaxed space-y-2 list-disc pl-5">
+                <Lightbulb className="w-10 h-10 sm:w-12 sm:h-12 text-white mb-6 sm:mb-8" />
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">Our Mission</h2>
+                <ul className="text-white/90 text-sm sm:text-lg leading-relaxed space-y-2 list-disc pl-5">
                   <li>To provide safe, effective, and affordable medicines.</li>
                   <li>To build long-term relationships with healthcare professionals and patients.</li>
                   <li>To uphold the highest standards of quality and regulatory compliance.</li>

@@ -41,7 +41,7 @@ export function ProductCard({ product }: { product: Product }) {
           </span>
         )}
         
-        <h3 className="font-display text-xs sm:text-[15px] font-bold text-primary mb-1 sm:mb-2 group-hover:text-teal transition-colors leading-tight">
+        <h3 className="font-display text-sm sm:text-[15px] font-bold text-primary mb-1 sm:mb-2 group-hover:text-teal transition-colors leading-tight">
           {product.name}
         </h3>
         
@@ -57,7 +57,7 @@ export function ProductCard({ product }: { product: Product }) {
           </span>
           <Link
             href={`/products/${product.slug}`}
-            className="text-teal text-[10px] sm:text-xs font-bold uppercase tracking-wider flex items-center gap-1 hover:text-primary transition-colors whitespace-nowrap"
+            className="text-teal text-xs font-bold uppercase tracking-wider flex items-center gap-1 hover:text-primary transition-colors whitespace-nowrap py-1"
           >
             Details
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
