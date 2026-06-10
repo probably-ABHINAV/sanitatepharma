@@ -88,12 +88,18 @@ export default function CareersPage() {
 
           {/* Masonry Grid (CSS columns approach or complex grid) */}
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Team meeting" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Laboratory work" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
-            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800" alt="Corporate office presentation" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
-            <img src="https://images.unsplash.com/photo-1574051833503-490334cd9928?auto=format&fit=crop&q=80&w=800" alt="Annual retreat" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="Developers at work" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800" alt="Scientists collaborating" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Pharma team collaboration */}
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=90&w=800" alt="Pharma team collaboration" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Scientist working in lab */}
+            <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=90&w=800" alt="Scientists in pharmaceutical laboratory" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Corporate office strategy */}
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=90&w=800" alt="Corporate team strategy meeting" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Lab research */}
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=800" alt="Pharmaceutical research" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Quality control */}
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=800" alt="Quality control in lab" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            {/* Scientists collaborating */}
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=90&w=800" alt="Scientists collaborating on research" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
           </div>
         </div>
       </section>

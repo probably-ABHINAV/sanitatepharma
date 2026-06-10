@@ -60,7 +60,7 @@ export function Footer() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
         >
           {/* ─── Column 1: Brand ─── */}
           <motion.div variants={itemVariants} className="space-y-6">
@@ -193,7 +193,7 @@ export function Footer() {
       {/* ─── Bottom Bar ─── */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-white/40 text-center sm:text-left">
             © {new Date().getFullYear()} {SITE_NAME} Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6">

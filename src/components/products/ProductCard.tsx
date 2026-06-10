@@ -17,7 +17,7 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Image Container */}
-      <div className="h-[200px] w-full bg-white border-b border-gray-50 flex items-center justify-center p-6 relative overflow-hidden">
+      <div className="h-[140px] sm:h-[200px] w-full bg-white border-b border-gray-50 flex items-center justify-center p-3 sm:p-6 relative overflow-hidden">
         {product.images && product.images.length > 0 ? (
           <img 
             src={product.images[0]} 
@@ -33,34 +33,34 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-3 sm:p-6 flex flex-col flex-1">
         {/* Category Pill */}
         {product.category?.name && (
-          <span className="inline-block w-fit px-2.5 py-1 bg-tealPale text-teal text-[10px] font-bold uppercase tracking-wider rounded-full mb-3">
+          <span className="hidden sm:inline-block w-fit px-2.5 py-1 bg-tealPale text-teal text-[10px] font-bold uppercase tracking-wider rounded-full mb-3">
             {product.category.name}
           </span>
         )}
         
-        <h3 className="font-display text-[15px] font-bold text-primary mb-2 group-hover:text-teal transition-colors">
+        <h3 className="font-display text-xs sm:text-[15px] font-bold text-primary mb-1 sm:mb-2 group-hover:text-teal transition-colors leading-tight">
           {product.name}
         </h3>
         
         {product.composition && (
-          <p className="text-textMid text-xs italic mb-4 line-clamp-2 leading-relaxed">
+          <p className="hidden sm:block text-textMid text-xs italic mb-4 line-clamp-2 leading-relaxed">
             {product.composition}
           </p>
         )}
         
-        <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-50">
-          <span className="text-xs font-medium text-gray-500">
-            {product.pack_size || 'Standard Pack'}
+        <div className="mt-auto pt-2 sm:pt-4 flex items-center justify-between border-t border-gray-50">
+          <span className="text-[10px] sm:text-xs font-medium text-gray-500 truncate max-w-[60px] sm:max-w-none">
+            {product.pack_size || 'Std'}
           </span>
           <Link
             href={`/products/${product.slug}`}
-            className="text-teal text-xs font-bold uppercase tracking-wider flex items-center gap-1 hover:text-primary transition-colors"
+            className="text-teal text-[10px] sm:text-xs font-bold uppercase tracking-wider flex items-center gap-1 hover:text-primary transition-colors whitespace-nowrap"
           >
-            View Details
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            Details
+            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

@@ -56,7 +56,7 @@ export default async function AboutPage() {
               <div className="relative aspect-square sm:aspect-[4/3] rounded-[32px] overflow-hidden border border-gray-100 shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent z-10 mix-blend-multiply" />
                 <img 
-                  src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=1600" 
+                  src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=90&w=1600" 
                   alt="Modern pharmaceutical facility" 
                   className="w-full h-full object-cover"
                 />
@@ -239,8 +239,8 @@ export default async function AboutPage() {
             {/* Right Image */}
             <ScrollFade direction="right">
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=80&w=600" alt="Lab equipment" className="w-full h-48 object-cover rounded-[20px]" />
-                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=600" alt="Scientists in lab" className="w-full h-48 object-cover rounded-[20px] mt-8" />
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=600" alt="Lab equipment" className="w-full h-48 object-cover rounded-[20px]" />
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=600" alt="Scientists in lab" className="w-full h-48 object-cover rounded-[20px] mt-8" />
               </div>
             </ScrollFade>
           </div>

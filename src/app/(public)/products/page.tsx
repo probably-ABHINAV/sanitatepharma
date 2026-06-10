@@ -75,19 +75,19 @@ export default async function ProductsPage(props: {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="mb-10">
-          <h1 className="font-display text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <div className="mb-8">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-3">
             Product Catalogue
           </h1>
-          <p className="text-textMid text-lg max-w-2xl">
+          <p className="text-textMid text-sm sm:text-lg max-w-2xl">
             Explore our comprehensive range of high-quality formulations designed to meet diverse medical requirements across India.
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10">
           
-          {/* Left Sidebar (Filters) */}
-          <aside className="w-full lg:w-[280px] shrink-0">
+          {/* Left Sidebar — hidden on mobile, shown on lg+ */}
+          <aside className="hidden lg:block w-full lg:w-[280px] shrink-0">
             <div className="lg:sticky lg:top-24 bg-white p-6 rounded-[20px] shadow-sm border border-gray-100">
               <FilterSidebar 
                 categories={(categories || []) as Category[]} 
@@ -98,8 +98,8 @@ export default async function ProductsPage(props: {
 
           {/* Right Content (Products Grid) */}
           <main className="flex-1 min-w-0">
-            {/* Top Bar: Showing results & Sort */}
-            <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            {/* Top Bar: Mobile filter row + Sort */}
+            <div className="bg-white p-3 sm:p-4 rounded-xl border border-gray-100 shadow-sm mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <p className="text-sm text-textMid font-medium">
                 Showing <span className="text-primary font-bold">{products.length ? offset + 1 : 0}-{Math.min(offset + ITEMS_PER_PAGE, totalItems)}</span> of <span className="text-primary font-bold">{totalItems}</span> products
               </p>
@@ -111,16 +111,29 @@ export default async function ProductsPage(props: {
                   className="text-sm border-none bg-offWhite rounded-lg px-3 py-1.5 font-medium text-primary focus:ring-1 focus:ring-teal outline-none cursor-pointer"
                   defaultValue="az"
                 >
-                  <option value="az">A-Z (Alphabetical)</option>
+                  <option value="az">A-Z</option>
                   <option value="newest">Newest First</option>
                 </select>
               </div>
             </div>
 
+            {/* Mobile-only Filters (horizontal scroll pills) */}
+            <div className="lg:hidden flex gap-2 overflow-x-auto pb-3 mb-4 scrollbar-none">
+              <a href="/products" className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
+                !categoryParam ? 'bg-teal text-white border-teal' : 'bg-white text-textMid border-gray-200 hover:border-teal'
+              }`}>All</a>
+              {(categories || []).map((cat: Category) => (
+                <a key={cat.id} href={`/products?category=${cat.slug}`} className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
+                  categoryParam === cat.slug ? 'bg-teal text-white border-teal' : 'bg-white text-textMid border-gray-200 hover:border-teal'
+                }`}>{cat.name}</a>
+              ))}
+            </div>
+
             {/* Products Grid */}
             {products.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                {/* 2-col on mobile, 2-col on sm, 3-col on xl */}
+                <div className="grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-6">
                   {products.map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
