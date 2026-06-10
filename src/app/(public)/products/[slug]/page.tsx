@@ -6,6 +6,7 @@ import { ProductTabs } from '@/components/products/ProductTabs';
 import { EnquiryModal } from '@/components/products/EnquiryModal';
 import { ProductCard } from '@/components/products/ProductCard';
 import { ChevronRight, FileDown, MessageSquare } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
 import type { Product } from '@/lib/types';
 
@@ -81,8 +82,74 @@ export default async function ProductDetailPage(props: PageProps) {
     }
   }
 
+  // JSON-LD Schemas
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Drug",
+    "@id": `https://www.sanitatepharma.com/products/${product.slug}#product`,
+    "name": product.name,
+    "description": `${product.name} — ${product.composition || ''}. ${product.indications || ''}`.slice(0, 160),
+    "activeIngredient": product.composition,
+    "administrationRoute": product.dosage,
+    "prescriptionStatus": product.prescription_type === 'rx'
+      ? "https://schema.org/PrescriptionOnly"
+      : "https://schema.org/OTC",
+    "manufacturer": {
+      "@id": "https://www.sanitatepharma.com/#organization"
+    },
+    "image": product.images?.map((img: string) => ({
+      "@type": "ImageObject",
+      "url": img,
+      "name": `${product.name} image`
+    })),
+    "url": `https://www.sanitatepharma.com/products/${product.slug}`,
+    "category": product.category?.name,
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": "https://www.sanitatepharma.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "India" }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sanitatepharma.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.sanitatepharma.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `https://www.sanitatepharma.com/products/${product.slug}`
+      }
+    ]
+  };
+
+  const indicationSchema = product.indications ? {
+    "@context": "https://schema.org",
+    "@type": "MedicalIndication",
+    "name": product.indications,
+    "relevantSpecialty": "https://schema.org/GeneralPractice"
+  } : null;
+
   return (
     <div className="min-h-screen bg-offWhite pt-32 pb-24">
+      <JsonLd data={productSchema} />
+      <JsonLd data={breadcrumbSchema} />
+      {indicationSchema && <JsonLd data={indicationSchema} />}
+      
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}

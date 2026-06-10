@@ -3,6 +3,7 @@ import { AnimatedCounter } from '@/components/about/AnimatedCounter';
 import { LeadershipCard } from '@/components/about/LeadershipCard';
 import { ScrollFade } from '@/components/about/ScrollFade';
 import { ShieldCheck, Heart, Users, Target, Lightbulb, CheckCircle2, Award } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 import type { TeamMember } from '@/lib/types';
 import type { Metadata } from 'next';
 
@@ -22,8 +23,28 @@ export default async function AboutPage() {
 
   const leaders = (teamMembers || []) as TeamMember[];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sanitatepharma.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://www.sanitatepharma.com/about"
+      }
+    ]
+  };
+
   return (
-    <main className="flex flex-col w-full overflow-hidden bg-offWhite pt-24">
+    <main className="flex flex-col w-full overflow-hidden bg-white pt-24">
+      <JsonLd data={breadcrumbSchema} />
       
       {/* ── HERO ── */}
       <section className="relative min-h-[60vh] flex items-center justify-center py-20 bg-primary overflow-hidden">

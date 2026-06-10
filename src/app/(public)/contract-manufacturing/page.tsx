@@ -2,6 +2,7 @@ import { Timeline } from '@/components/manufacturing/Timeline';
 import { ManufacturingForm } from '@/components/manufacturing/ManufacturingForm';
 import { AnimatedCounter } from '@/components/about/AnimatedCounter';
 import { FileDown, MessageSquare, ShieldCheck, CheckCircle2, Factory, Package, Syringe, TestTube, Truck } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,8 +20,75 @@ const CAPABILITIES = [
 ];
 
 export default function ContractManufacturingPage() {
+  const contractFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What formulations do you manufacture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We manufacture tablets, capsules, liquid syrups, dry syrups, ointments, creams, gels, injectables, and nutraceutical products."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your manufacturing facility WHO-GMP certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our state-of-the-art manufacturing facilities are fully WHO-GMP certified, ISO 9001:2015 compliant, and DCGI approved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum batch size for contract manufacturing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum batch size depends on the formulation and packaging type. Generally, it starts from 50,000 tablets/capsules or 5,000 bottles for liquids. Please contact us for product-specific details."
+        }
+      }
+    ]
+  };
+
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Start Contract Manufacturing with Sanitatepharma",
+    "description": "Step-by-step guide to begin pharma contract manufacturing with Sanitatepharma",
+    "totalTime": "PT4W",
+    "step": [
+      { "@type": "HowToStep", "name": "Submit Requirement", "text": "Share your product requirements, formulation details and target quantities via enquiry form.", "position": 1 },
+      { "@type": "HowToStep", "name": "Formulation Study", "text": "Our R&D team conducts feasibility study and proposes formulation within 2–4 weeks.", "position": 2 },
+      { "@type": "HowToStep", "name": "Trial Batch", "text": "Pilot batch produced and shared for approval with full COA documentation.", "position": 3 },
+      { "@type": "HowToStep", "name": "Commercial Production", "text": "Full-scale production begins after approval, with quality release and dispatch.", "position": 4 }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sanitatepharma.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contract Manufacturing",
+        "item": "https://www.sanitatepharma.com/contract-manufacturing"
+      }
+    ]
+  };
+
   return (
     <main className="flex flex-col w-full overflow-hidden bg-offWhite pt-24">
+      <JsonLd data={contractFAQSchema} />
+      <JsonLd data={howToSchema} />
+      <JsonLd data={breadcrumbSchema} />
       
       {/* ── HERO ── */}
       <section className="relative min-h-[60vh] flex items-center justify-center py-24 overflow-hidden bg-primary">

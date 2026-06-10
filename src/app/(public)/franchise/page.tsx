@@ -2,6 +2,7 @@ import { FranchiseForm } from '@/components/franchise/FranchiseForm';
 import { ProcessSteps } from '@/components/franchise/ProcessSteps';
 import { FAQ } from '@/components/franchise/FAQ';
 import { FileDown, MapPin, TrendingUp, Handshake, Box, Star, GraduationCap, Building2, UserCircle2, Truck } from 'lucide-react';
+import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -24,8 +25,76 @@ const SEGMENTS = [
 ];
 
 export default function FranchisePage() {
+  const franchiseFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum investment for Sanitatepharma PCD franchise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum investment for a Sanitatepharma PCD pharma franchise starts from ₹X lakhs, covering initial stock, promotional materials, and territory deposit. Working capital requirements vary by territory size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Sanitatepharma offer exclusive territory rights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Sanitatepharma offers exclusive territory rights to PCD franchise partners. Each partner receives a defined geographic territory with no competing appointments from the company."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What products are available under the Sanitatepharma franchise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sanitatepharma's franchise portfolio includes 500+ products across General Medicine, Cardiac, Diabetic, Gynecology, Pediatrics, Dermatology and Neuropsychiatry segments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pharma experience required to apply for a Sanitatepharma franchise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No prior pharma experience is mandatory. We welcome pharmacists, healthcare professionals, entrepreneurs and existing distributors. Full training and onboarding is provided."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to start after franchise agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After signing the franchise agreement, partners typically receive their first product dispatch within 7-10 working days. Territory activation and marketing material dispatch happens simultaneously."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sanitatepharma.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Franchise",
+        "item": "https://www.sanitatepharma.com/franchise"
+      }
+    ]
+  };
+
   return (
     <main className="flex flex-col w-full overflow-hidden bg-offWhite pt-24">
+      <JsonLd data={franchiseFAQSchema} />
+      <JsonLd data={breadcrumbSchema} />
       
       {/* ── HERO ── */}
       <section className="relative min-h-[70vh] flex items-center justify-center py-20 bg-gradient-to-br from-navy via-primary to-teal overflow-hidden">
