@@ -1,21 +1,19 @@
-import type { Metadata } from 'next';
+import { createClient } from '@/lib/supabase/server';
+import { EnquiriesClient } from '@/components/admin/EnquiriesClient';
 
-export const metadata: Metadata = {
-  title: 'Enquiries — Sanitatepharma Admin',
+export const metadata = {
+  title: 'Enquiries — Sanitate Pharma Admin',
 };
 
-export default function AdminEnquiriesPage() {
+export default async function AdminEnquiriesPage() {
+  const supabase = await createClient();
+
+  const { data: enquiries } = await supabase
+    .from('enquiries')
+    .select('*')
+    .order('created_at', { ascending: false });
+
   return (
-    <div className="p-8">
-      <h1 className="font-display text-3xl font-bold text-primary mb-8">
-        Enquiries
-      </h1>
-      <div className="bg-white rounded-xl shadow-card overflow-hidden">
-        <div className="p-6 text-center text-textMid">
-          <p>Enquiry management dashboard will be implemented here.</p>
-          <p className="text-sm mt-2">Connect Supabase to load enquiries.</p>
-        </div>
-      </div>
-    </div>
+    <EnquiriesClient initialEnquiries={enquiries || []} />
   );
 }

@@ -25,7 +25,7 @@ export const enquirySchema = z.object({
     'contract_manufacturing',
     'career',
     'media',
-  ], { required_error: 'Please select an enquiry type' }),
+  ], { message: 'Please select an enquiry type' }),
   subject: z
     .string()
     .max(200, 'Subject must not exceed 200 characters')

@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ═══════════════════════════════════════════════════
+   SANITATEPHARMA — Design System (Tailwind CSS v4)
+   ═══════════════════════════════════════════════════ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ─── Colors ─── */
+  --color-primary: #0A1F44;
+  --color-teal: #00897B;
+  --color-tealLight: #4DB6AC;
+  --color-tealPale: #E0F2F1;
+  --color-gold: #F9A825;
+  --color-textDark: #1A2E3A;
+  --color-textMid: #4A6572;
+  --color-offWhite: #F8FBFA;
+  --color-navy: #0A1F44;
+
+  /* ─── Typography ─── */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  /* ─── Radius ─── */
+  --radius-card: 8px;
+  --radius-modal: 12px;
+  --radius-btn: 4px;
+  --radius-pill: 9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-card: 0 4px 24px rgba(10, 31, 68, 0.10);
+  --shadow-nav: 0 2px 20px rgba(10, 31, 68, 0.08);
+  --shadow-soft: 0 1px 3px rgba(10, 31, 68, 0.06);
+
+  /* ─── Animation ─── */
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Keyframes ─── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes underline-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ─── Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FBFA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4DB6AC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00897B;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: #E0F2F1;
+  color: #0A1F44;
+}
+
+/* ─── Focus ─── */
+:focus-visible {
+  outline: 2px solid #00897B;
+  outline-offset: 2px;
+}
+
+/* ─── Micro-Interactions ─── */
+@media (prefers-reduced-motion: no-preference) {
+  .hover-card {
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  }
+  .hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(10, 31, 68, 0.15);
+  }
+
+  .hover-nav-arrow {
+    transition: transform 200ms ease-out;
+  }
+  .group:hover .hover-nav-arrow,
+  .hover-nav-arrow:hover {
+    transform: translateX(4px);
+  }
+
+  @keyframes arrow-bounce-x {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+  }
+
+  .group:hover .hover-cta-arrow {
+    animation: arrow-bounce-x 600ms ease-in-out infinite;
+  }
 }

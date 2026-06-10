@@ -31,13 +31,20 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-primary">
-      <div className="bg-white rounded-xl shadow-card p-8 w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="font-display text-2xl font-bold text-primary">
+    <div className="w-full max-w-md">
+      <div className="bg-white rounded-2xl shadow-card p-10 border border-gray-100">
+        <div className="text-center mb-10">
+          <div className="w-12 h-12 bg-teal/10 rounded-xl mx-auto flex items-center justify-center mb-4">
+             <div className="w-6 h-4 bg-teal rounded-[2px] relative overflow-hidden">
+               <div className="absolute inset-0 flex items-center justify-center gap-[2px]">
+                 <div className="w-[2px] h-2 bg-white/60 rounded-full" />
+               </div>
+             </div>
+          </div>
+          <h1 className="font-display text-2xl font-bold text-primary tracking-tight">
             Admin Login
           </h1>
-          <p className="text-textMid mt-2">Sanitatepharma Dashboard</p>
+          <p className="text-textMid text-sm mt-2">Sanitate Pharma Dashboard</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
@@ -57,7 +64,7 @@ export default function AdminLoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-teal focus:border-transparent outline-none transition-all"
-              placeholder="admin@sanitatepharma.com"
+              placeholder="name@company.com"
               required
             />
           </div>

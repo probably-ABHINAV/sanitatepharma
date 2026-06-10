@@ -1,5 +1,7 @@
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
+import { PageLoader } from '@/components/ui/PageLoader';
+import { PageTransition } from '@/components/ui/PageTransition';
 
 export default function PublicLayout({
   children,
@@ -8,8 +10,11 @@ export default function PublicLayout({
 }) {
   return (
     <>
+      <PageLoader />
       <Navbar />
-      <main className="min-h-screen">{children}</main>
+      <PageTransition>
+        <main className="min-h-screen">{children}</main>
+      </PageTransition>
       <Footer />
     </>
   );
