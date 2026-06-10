@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion, type Variants } from 'framer-motion';
 import { Phone, Mail, MapPin, ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { AppLogo } from '@/components/ui/AppLogo';
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -64,16 +65,8 @@ export function Footer() {
           {/* ─── Column 1: Brand ─── */}
           <motion.div variants={itemVariants} className="space-y-6">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 flex items-center justify-center">
-                <div className="w-7 h-5 bg-teal rounded-[3px] relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center gap-[3px]">
-                    <div className="w-[3px] h-3 bg-white/40 rounded-full" />
-                    <div className="w-[3px] h-3 bg-white/60 rounded-full" />
-                    <div className="w-[3px] h-3 bg-white/40 rounded-full" />
-                  </div>
-                </div>
-              </div>
+            <Link href="/" className="flex items-center gap-2.5 group inline-flex mb-6">
+              <AppLogo className="w-8 h-8" />
               <span className="font-display text-xl font-extrabold tracking-tight text-white">
                 {SITE_NAME}
               </span>

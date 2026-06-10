@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
+import { AppLogo } from '@/components/ui/AppLogo';
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState('');
@@ -34,13 +35,7 @@ export default function AdminLoginPage() {
     <div className="w-full max-w-md">
       <div className="bg-white rounded-2xl shadow-card p-10 border border-gray-100">
         <div className="text-center mb-10">
-          <div className="w-12 h-12 bg-teal/10 rounded-xl mx-auto flex items-center justify-center mb-4">
-             <div className="w-6 h-4 bg-teal rounded-[2px] relative overflow-hidden">
-               <div className="absolute inset-0 flex items-center justify-center gap-[2px]">
-                 <div className="w-[2px] h-2 bg-white/60 rounded-full" />
-               </div>
-             </div>
-          </div>
+          <AppLogo className="w-16 h-16 mx-auto mb-4" />
           <h1 className="font-display text-2xl font-bold text-primary tracking-tight">
             Admin Login
           </h1>

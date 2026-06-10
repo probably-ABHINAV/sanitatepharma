@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { SITE_NAME } from '@/lib/constants';
+import { AppLogo } from '@/components/ui/AppLogo';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function PageLoader() {
@@ -45,14 +47,14 @@ export function PageLoader() {
             transition={{ duration: 1.2, ease: "easeInOut" }}
           />
 
-          {/* Logo Text Fading In */}
+          {/* Logo Mark Fading In */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' }}
-            className="flex items-center gap-2"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="flex items-center justify-center mb-6 gap-3"
           >
-            <div className="w-5 h-8 bg-teal rounded-sm" />
+            <AppLogo className="w-16 h-16" />
             <span className="font-display font-extrabold text-3xl text-primary tracking-tight">
               Sanitatepharma
             </span>

@@ -16,6 +16,7 @@ import {
 import { cn } from '@/lib/utils';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import { AppLogo } from '@/components/ui/AppLogo';
 
 const NAV_ITEMS = [
   { label: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
@@ -46,9 +47,7 @@ export function AdminSidebar() {
     <aside className="w-[240px] fixed top-0 left-0 bottom-0 bg-white border-r border-gray-100 flex flex-col z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
       {/* Brand Header */}
       <div className="h-16 flex items-center px-6 border-b border-gray-100">
-        <div className="w-6 h-6 bg-teal rounded-[3px] relative overflow-hidden mr-3 shrink-0 flex items-center justify-center">
-           <div className="w-[2px] h-3 bg-white/60 rounded-full" />
-        </div>
+        <AppLogo className="w-7 h-7 mr-3 shrink-0" />
         <span className="font-display font-extrabold text-primary tracking-tight">Sanitate Admin</span>
       </div>
 

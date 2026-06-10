@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { NAV_ITEMS, SITE_NAME } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import { AppLogo } from '@/components/ui/AppLogo';
 
 /* ─── Category Icons Map ─── */
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
@@ -93,16 +94,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-[72px]">
             {/* ─── Logo ─── */}
             <Link href="/" className="flex items-center gap-2.5 group" id="nav-logo">
-              {/* Medicine strip icon */}
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <div className="w-7 h-5 bg-teal rounded-[3px] relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center gap-[3px]">
-                    <div className="w-[3px] h-3 bg-white/40 rounded-full" />
-                    <div className="w-[3px] h-3 bg-white/60 rounded-full" />
-                    <div className="w-[3px] h-3 bg-white/40 rounded-full" />
-                  </div>
-                </div>
-              </div>
+              <AppLogo className="w-9 h-9" />
               <span className="font-display text-xl font-extrabold tracking-tight transition-colors duration-300 text-primary">
                 {SITE_NAME}
               </span>
@@ -361,15 +353,7 @@ function CompanyDropdown({ links }: { links: { label: string; href: string }[] }
 
         {/* Right — Visual panel */}
         <div className="col-span-2 bg-gradient-to-br from-tealPale to-tealPale/50 p-6 flex flex-col justify-end">
-          <div className="w-14 h-14 bg-teal/10 rounded-xl flex items-center justify-center mb-4">
-            <div className="w-8 h-6 bg-teal rounded-[3px] relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center gap-[2px]">
-                <div className="w-[2px] h-2.5 bg-white/40 rounded-full" />
-                <div className="w-[2px] h-2.5 bg-white/60 rounded-full" />
-                <div className="w-[2px] h-2.5 bg-white/40 rounded-full" />
-              </div>
-            </div>
-          </div>
+          <AppLogo className="w-14 h-14 mb-4 text-teal opacity-80" />
           <p className="font-display text-base font-bold text-primary leading-tight">
             Making Quality Healthcare
           </p>
