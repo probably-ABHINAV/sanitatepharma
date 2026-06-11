@@ -85,7 +85,9 @@ export const COMPANY_STATS = [
 export const CONTACT_INFO = {
   address: '713, Devika Tower, Chander Nagar, Ghaziabad, Uttar Pradesh – 201011, India',
   phone: '+91 83770 72807',
-  email: 'sanitate.pharma@gmail.com',
+  email: 'info@sanitatepharma.com',
+  salesEmail: 'sales@sanitatepharma.com',
+  supportEmail: 'contact@sanitatepharma.com',
 } as const;
 
 // ─── Social Links ───

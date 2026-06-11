@@ -43,9 +43,26 @@ export default function ContactPage() {
                   </span>
                   Email Us
                 </h3>
-                <a href="mailto:sanitate.pharma@gmail.com" className="text-textMid hover:text-teal font-medium transition-colors text-lg">
-                  sanitate.pharma@gmail.com
-                </a>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-textMid mb-1">General Enquiries</p>
+                    <a href="mailto:info@sanitatepharma.com" className="block text-primary hover:text-teal font-medium transition-colors text-base">
+                      info@sanitatepharma.com
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-textMid mb-1">Sales & Franchise</p>
+                    <a href="mailto:sales@sanitatepharma.com" className="block text-primary hover:text-teal font-medium transition-colors text-base">
+                      sales@sanitatepharma.com
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-textMid mb-1">Support & Contact</p>
+                    <a href="mailto:contact@sanitatepharma.com" className="block text-primary hover:text-teal font-medium transition-colors text-base">
+                      contact@sanitatepharma.com
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-white rounded-[24px] p-8 shadow-sm border-2 border-teal/10 hover:border-teal/30 transition-colors">

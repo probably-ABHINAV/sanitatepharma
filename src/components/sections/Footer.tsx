@@ -170,6 +170,24 @@ export function Footer() {
                   {CONTACT_INFO.email}
                 </a>
               </li>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_INFO.salesEmail}`}
+                  className="flex items-center gap-3 text-sm text-white/60 hover:text-tealLight transition-colors"
+                >
+                  <Mail className="w-4 h-4 opacity-0 flex-shrink-0" />
+                  {CONTACT_INFO.salesEmail}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_INFO.supportEmail}`}
+                  className="flex items-center gap-3 text-sm text-white/60 hover:text-tealLight transition-colors"
+                >
+                  <Mail className="w-4 h-4 opacity-0 flex-shrink-0" />
+                  {CONTACT_INFO.supportEmail}
+                </a>
+              </li>
             </ul>
 
             {/* CTA Button */}
