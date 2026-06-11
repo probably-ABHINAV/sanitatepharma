@@ -58,10 +58,10 @@ export default async function DashboardPage() {
       {/* Analytics Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
         <div className="lg:col-span-2">
-          <EnquiryTrendsChart enquiries={chartEnquiries || []} />
+          <EnquiryTrendsChart enquiries={(chartEnquiries as any) || []} />
         </div>
         <div className="lg:col-span-1">
-          <EnquiryTypePie enquiries={chartEnquiries || []} />
+          <EnquiryTypePie enquiries={(chartEnquiries as any) || []} />
         </div>
       </div>
 
