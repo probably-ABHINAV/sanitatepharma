@@ -43,5 +43,14 @@ export async function updateSession(request: NextRequest) {
     }
   }
 
+  // Protect portal routes
+  if (request.nextUrl.pathname.startsWith('/portal') && !request.nextUrl.pathname.startsWith('/portal/login')) {
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/portal/login';
+      return NextResponse.redirect(url);
+    }
+  }
+
   return supabaseResponse;
 }

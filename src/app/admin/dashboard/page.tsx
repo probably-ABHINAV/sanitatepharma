@@ -1,6 +1,8 @@
 import { createClient } from '@/lib/supabase/server';
 import { Package, Inbox, Briefcase, Factory, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { EnquiryTrendsChart } from '@/components/admin/charts/EnquiryTrendsChart';
+import { EnquiryTypePie } from '@/components/admin/charts/EnquiryTypePie';
 
 export const metadata = {
   title: 'Dashboard — Sanitate Pharma Admin',
@@ -16,12 +18,14 @@ export default async function DashboardPage() {
     { count: franchiseCount },
     { count: contractCount },
     { data: recentEnquiries },
+    { data: chartEnquiries },
   ] = await Promise.all([
     supabase.from('products').select('*', { count: 'exact', head: true }).eq('status', 'active'),
     supabase.from('enquiries').select('*', { count: 'exact', head: true }).eq('status', 'new'),
     supabase.from('enquiries').select('*', { count: 'exact', head: true }).eq('enquiry_type', 'franchise').eq('status', 'new'),
     supabase.from('enquiries').select('*', { count: 'exact', head: true }).eq('enquiry_type', 'contract_manufacturing'),
     supabase.from('enquiries').select('*').order('created_at', { ascending: false }).limit(5),
+    supabase.from('enquiries').select('id, created_at, enquiry_type').order('created_at', { ascending: false }).limit(200),
   ]);
 
   const stats = [
@@ -49,6 +53,16 @@ export default async function DashboardPage() {
             </div>
           );
         })}
+      </div>
+
+      {/* Analytics Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+        <div className="lg:col-span-2">
+          <EnquiryTrendsChart enquiries={chartEnquiries || []} />
+        </div>
+        <div className="lg:col-span-1">
+          <EnquiryTypePie enquiries={chartEnquiries || []} />
+        </div>
       </div>
 
       {/* Recent Enquiries Table */}

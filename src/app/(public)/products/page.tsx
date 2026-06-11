@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 import { FilterSidebar } from '@/components/products/FilterSidebar';
 import { ProductCard } from '@/components/products/ProductCard';
 import { Pagination } from '@/components/ui/Pagination';
-import { PackageSearch, X } from 'lucide-react';
+import { PackageSearch, X, FileDown } from 'lucide-react';
 import Link from 'next/link';
 import type { Product, Category } from '@/lib/types';
 
@@ -47,7 +47,8 @@ export default async function ProductsPage(props: {
   }
   
   if (qParam) {
-    query = query.ilike('name', `%${qParam}%`);
+    // Search both brand name and drug composition
+    query = query.or(`name.ilike.%${qParam}%,composition.ilike.%${qParam}%`);
   }
 
   // Add sorting (A-Z by default)
@@ -75,13 +76,25 @@ export default async function ProductsPage(props: {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="mb-8">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-3">
-            Product Catalogue
-          </h1>
-          <p className="text-textMid text-sm sm:text-lg max-w-2xl">
-            Explore our comprehensive range of high-quality formulations designed to meet diverse medical requirements across India.
-          </p>
+        <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-3">
+              Product Catalogue
+            </h1>
+            <p className="text-textMid text-sm sm:text-lg max-w-2xl">
+              Explore our comprehensive range of high-quality formulations designed to meet diverse medical requirements across India.
+            </p>
+          </div>
+          
+          <a
+            href="/api/catalog/pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-teal text-teal text-sm font-semibold uppercase tracking-wider rounded-btn hover:bg-tealPale transition-colors duration-300 shadow-sm"
+          >
+            <FileDown className="w-4 h-4" />
+            Download PDF
+          </a>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10">
