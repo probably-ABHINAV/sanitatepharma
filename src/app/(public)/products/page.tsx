@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { FilterSidebar } from '@/components/products/FilterSidebar';
 import { ProductCard } from '@/components/products/ProductCard';
 import { Pagination } from '@/components/ui/Pagination';
@@ -23,13 +23,31 @@ export default async function ProductsPage(props: {
   const ITEMS_PER_PAGE = 12;
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
-  const supabase = await createClient();
+  const supabase = await createServiceClient();
 
   // 1. Fetch categories for sidebar
-  const { data: categories } = await supabase
+  const { data: categoriesData } = await supabase
     .from('categories')
     .select('*')
     .order('name');
+
+  // Fetch active products category distribution to calculate dynamic counts
+  const { data: activeProductsIds } = await supabase
+    .from('products')
+    .select('category_id')
+    .eq('status', 'active');
+
+  const categoryCounts = (activeProductsIds || []).reduce((acc, curr) => {
+    if (curr.category_id) {
+      acc[curr.category_id] = (acc[curr.category_id] || 0) + 1;
+    }
+    return acc;
+  }, {} as Record<string, number>);
+
+  const categories = (categoriesData || []).map(cat => ({
+    ...cat,
+    product_count: categoryCounts[cat.id] || 0
+  })) as Category[];
 
   // 2. Build dynamic products query
   // We use inner join on categories to filter by category slug
@@ -58,6 +76,7 @@ export default async function ProductsPage(props: {
   query = query.range(offset, offset + ITEMS_PER_PAGE - 1);
 
   const { data: productsData, count, error } = await query;
+  console.log("Products Fetch Error:", error, "Count:", count, "Categories:", categories?.length);
 
   const products = (productsData || []) as Product[];
   const totalItems = count || 0;

@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { PackageSearch, FileDown, ShoppingCart } from 'lucide-react';
 import type { Product } from '@/lib/types';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ export default async function PortalProductsPage(props: {
   const searchParams = await props.searchParams;
   const qParam = typeof searchParams.q === 'string' ? searchParams.q : '';
 
-  const supabase = await createClient();
+  const supabase = await createServiceClient();
 
   let query = supabase
     .from('products')

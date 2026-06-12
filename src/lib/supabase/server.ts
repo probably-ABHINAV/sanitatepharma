@@ -27,3 +27,23 @@ export async function createClient() {
     }
   );
 }
+
+import { createClient as createRawClient } from '@supabase/supabase-js';
+
+export async function createServiceClient() {
+  // Use raw client instead of SSR client to ensure cookies (user sessions) 
+  // do not override the service_role key's privileges
+  return createRawClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+      global: {
+        fetch: (url, options) => fetch(url, { ...options, cache: 'no-store' }),
+      }
+    }
+  );
+}

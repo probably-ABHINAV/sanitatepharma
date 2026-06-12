@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server';
 import { renderToStream } from '@react-pdf/renderer';
 import { CatalogDocument } from '@/components/pdf/CatalogDocument';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import type { Product } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const supabase = await createClient();
+    const supabase = await createServiceClient();
 
     // Fetch active products with their categories
     const { data: productsData, error } = await supabase

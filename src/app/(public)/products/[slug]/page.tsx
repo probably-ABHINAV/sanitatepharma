@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { ImageGallery } from '@/components/products/ImageGallery';
 import { ProductTabs } from '@/components/products/ProductTabs';
 import { EnquiryModal } from '@/components/products/EnquiryModal';
@@ -16,7 +16,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
-  const supabase = await createClient();
+  const supabase = await createServiceClient();
   
   const { data: product } = await supabase
     .from('products')
@@ -50,7 +50,7 @@ export async function generateStaticParams() {
 
 export default async function ProductDetailPage(props: PageProps) {
   const resolvedParams = await props.params;
-  const supabase = await createClient();
+  const supabase = await createServiceClient();
 
   // 1. Fetch Product
   const { data: productData } = await supabase

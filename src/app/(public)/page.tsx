@@ -1,4 +1,4 @@
-import { createClient } from '@/lib/supabase/server';
+import { createServiceClient } from '@/lib/supabase/server';
 import { Hero } from '@/components/sections/home/Hero';
 import { TrustMarquee } from '@/components/sections/home/TrustMarquee';
 import { AboutSnapshot } from '@/components/sections/home/AboutSnapshot';
@@ -12,7 +12,7 @@ import type { Product, Category, NewsArticle } from '@/lib/types';
 export const revalidate = 3600; // revalidate every hour
 
 export default async function HomePage() {
-  const supabase = await createClient();
+  const supabase = await createServiceClient();
 
   // Parallel data fetching for better performance
   const [productsRes, categoriesRes, newsRes] = await Promise.all([
