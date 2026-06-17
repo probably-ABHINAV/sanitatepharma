@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase/server';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 1. Define your website's main URL (fallback to localhost for development)
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sanitatepharma.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sanitatepharma.com';
 
   // 2. Create the list of static pages
   const staticRoutes = [

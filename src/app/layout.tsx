@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description:
     "Sanitate Pharma is committed to making quality healthcare accessible and affordable. Explore our pharmaceutical products, franchise opportunities, and contract manufacturing services.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.sanitatepharma.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://sanitatepharma.com"
   ),
   openGraph: {
     title: "Sanitate Pharma — India's Leading Pharmaceutical Company",
     description: "Sanitate Pharma is committed to making quality healthcare accessible and affordable. Explore our pharmaceutical products, franchise opportunities, and contract manufacturing services.",
-    url: "https://www.sanitatepharma.com",
+    url: "https://sanitatepharma.com",
     siteName: "Sanitatepharma Pvt. Ltd.",
     locale: "en_IN",
     type: "website",
@@ -46,13 +46,13 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://www.sanitatepharma.com/#organization",
+    "@id": "https://sanitatepharma.com/#organization",
     name: "Sanitatepharma Pvt. Ltd.",
     alternateName: "Sanitatepharma",
-    url: "https://www.sanitatepharma.com",
+    url: "https://sanitatepharma.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.sanitatepharma.com/logo.png",
+      url: "https://sanitatepharma.com/logo.png",
       width: 400,
       height: 80,
     },
@@ -107,17 +107,17 @@ export default function RootLayout({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://www.sanitatepharma.com/#website",
-    url: "https://www.sanitatepharma.com",
+    "@id": "https://sanitatepharma.com/#website",
+    url: "https://sanitatepharma.com",
     name: "Sanitatepharma",
     description: "India's quality pharmaceutical company",
-    publisher: { "@id": "https://www.sanitatepharma.com/#organization" },
+    publisher: { "@id": "https://sanitatepharma.com/#organization" },
     inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://www.sanitatepharma.com/products?q={search_term_string}",
+        urlTemplate: "https://sanitatepharma.com/products?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -126,10 +126,10 @@ export default function RootLayout({
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "MedicalBusiness", "Pharmacy"],
-    "@id": "https://www.sanitatepharma.com/#localbusiness",
+    "@id": "https://sanitatepharma.com/#localbusiness",
     name: "Sanitatepharma Pvt. Ltd.",
-    image: "https://www.sanitatepharma.com/office.jpg",
-    url: "https://www.sanitatepharma.com",
+    image: "https://sanitatepharma.com/office.jpg",
+    url: "https://sanitatepharma.com",
     telephone: CONTACT_INFO.phone,
     email: CONTACT_INFO.email,
     address: {

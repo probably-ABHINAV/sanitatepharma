@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   // Define your website's main URL (fallback to localhost for development)
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sanitatepharma.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sanitatepharma.com';
 
   return {
     rules: [
