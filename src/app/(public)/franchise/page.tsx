@@ -1,6 +1,7 @@
 import { FranchiseForm } from '@/components/franchise/FranchiseForm';
 import { ProcessSteps } from '@/components/franchise/ProcessSteps';
 import { FAQ } from '@/components/franchise/FAQ';
+import { SeoArticle } from '@/components/franchise/SeoArticle';
 import { FileDown, MapPin, TrendingUp, Handshake, Box, Star, GraduationCap, Building2, UserCircle2, Truck } from 'lucide-react';
 import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
@@ -100,7 +101,7 @@ export default function FranchisePage() {
                 PCD Pharma Franchise
               </span>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-white mb-6 leading-[1.1]">
-                Partner With Sanitatepharma — Grow Your Business
+                Start Your PCD Pharma Franchise With Sanitatepharma
               </h1>
               <p className="text-white/80 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed">
                 Join India's fastest-growing pharmaceutical franchise network. Secure monopoly rights in your district and build a highly profitable business with our WHO-GMP certified product range.
@@ -268,6 +269,8 @@ export default function FranchisePage() {
           </div>
         </div>
       </section>
+
+      <SeoArticle />
 
       {/* ── APPLICATION FORM & FAQ ── */}
       <section className="py-24 bg-offWhite" id="apply">
