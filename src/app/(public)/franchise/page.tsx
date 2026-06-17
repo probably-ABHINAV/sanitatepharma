@@ -34,7 +34,7 @@ export default function FranchisePage() {
         "name": "What is the minimum investment for Sanitatepharma PCD franchise?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The minimum investment for a Sanitatepharma PCD pharma franchise starts from ₹X lakhs, covering initial stock, promotional materials, and territory deposit. Working capital requirements vary by territory size."
+          "text": "[PLACEHOLDER: Please provide the exact minimum investment amount]"
         }
       },
       {
@@ -42,31 +42,23 @@ export default function FranchisePage() {
         "name": "Does Sanitatepharma offer exclusive territory rights?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Sanitatepharma offers exclusive territory rights to PCD franchise partners. Each partner receives a defined geographic territory with no competing appointments from the company."
+          "text": "[PLACEHOLDER: Please clarify territory exclusivity terms]"
         }
       },
       {
         "@type": "Question",
-        "name": "What products are available under the Sanitatepharma franchise?",
+        "name": "What product categories are available under the franchise?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sanitatepharma's franchise portfolio includes 500+ products across General Medicine, Cardiac, Diabetic, Gynecology, Pediatrics, Dermatology and Neuropsychiatry segments."
+          "text": "[PLACEHOLDER: Please provide available product categories]"
         }
       },
       {
         "@type": "Question",
-        "name": "Is pharma experience required to apply for a Sanitatepharma franchise?",
+        "name": "How do I apply for a franchise?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No prior pharma experience is mandatory. We welcome pharmacists, healthcare professionals, entrepreneurs and existing distributors. Full training and onboarding is provided."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to start after franchise agreement?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After signing the franchise agreement, partners typically receive their first product dispatch within 7-10 working days. Territory activation and marketing material dispatch happens simultaneously."
+          "text": "[PLACEHOLDER: Please provide the application process steps]"
         }
       }
     ]

@@ -60,27 +60,16 @@ export default function RootLayout({
     foundingDate: "2008",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "713, Devika Tower, Chander Nagar",
-      addressLocality: "Ghaziabad",
-      addressRegion: "Uttar Pradesh",
-      postalCode: "201011",
+      streetAddress: "[YOUR ADDRESS]",
       addressCountry: "IN",
     },
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: CONTACT_INFO.phone,
+        telephone: "[YOUR PHONE]",
         contactType: "customer service",
-        availableLanguage: ["Hindi", "English"],
-        areaServed: "IN",
-      },
-      {
-        "@type": "ContactPoint",
-        telephone: CONTACT_INFO.phone,
-        contactType: "sales",
-        availableLanguage: ["Hindi", "English"],
-        areaServed: "IN",
-      },
+        email: "[YOUR EMAIL]"
+      }
     ],
     sameAs: [
       "https://www.linkedin.com/company/sanitatepharma",
@@ -88,9 +77,7 @@ export default function RootLayout({
       "https://www.facebook.com/sanitatepharma",
     ],
     hasCredential: [
-      { "@type": "EducationalOccupationalCredential", credentialCategory: "WHO-GMP Certificate" },
-      { "@type": "EducationalOccupationalCredential", credentialCategory: "ISO 9001:2015" },
-      { "@type": "EducationalOccupationalCredential", credentialCategory: "DCGI License" },
+      { "@type": "EducationalOccupationalCredential", credentialCategory: "[LIST ONLY REAL ONES, or write 'none yet']" },
     ],
     numberOfEmployees: { "@type": "QuantitativeValue", value: 500 },
     areaServed: { "@type": "Country", name: "India" },
@@ -130,14 +117,11 @@ export default function RootLayout({
     name: "Sanitatepharma Pvt. Ltd.",
     image: "https://sanitatepharma.com/office.jpg",
     url: "https://sanitatepharma.com",
-    telephone: CONTACT_INFO.phone,
-    email: CONTACT_INFO.email,
+    telephone: "[YOUR PHONE]",
+    email: "[YOUR EMAIL]",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "713, Devika Tower, Chander Nagar",
-      addressLocality: "Ghaziabad",
-      addressRegion: "Uttar Pradesh",
-      postalCode: "201011",
+      streetAddress: "[YOUR ADDRESS]",
       addressCountry: "IN",
     },
     geo: {
