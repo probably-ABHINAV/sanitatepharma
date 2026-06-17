@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const stats = [
   { value: '500+', label: 'Products' },
@@ -104,11 +105,14 @@ export function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="w-full h-full relative"
               >
-                <div className="absolute inset-0 rounded-full border-[8px] border-white shadow-2xl overflow-hidden flex items-center justify-center bg-white">
-                  <img 
+                <div className="absolute inset-0 rounded-full border-[8px] border-white shadow-2xl overflow-hidden flex items-center justify-center bg-white relative">
+                  <Image 
                     src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=90&w=900" 
                     alt="Premium Pharmaceutical Products" 
-                    className="w-full h-full object-cover scale-110"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 500px"
+                    className="object-cover scale-110"
                   />
                 </div>
               </motion.div>
@@ -118,12 +122,15 @@ export function Hero() {
           {/* Mobile-only Image Strip */}
           <div className="lg:hidden w-full mt-2">
             <div className="rounded-2xl overflow-hidden h-52 w-full relative">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=90&w=800" 
-                alt="Premium Pharmaceutical Products" 
-                className="w-full h-full object-cover"
+                alt="Premium Pharmaceutical Products Mobile" 
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
             </div>
           </div>
 

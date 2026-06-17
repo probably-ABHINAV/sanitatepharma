@@ -4,6 +4,7 @@ import { createClient } from '@/lib/supabase/server';
 import { ChevronRight, Calendar, User } from 'lucide-react';
 import { JsonLd } from '@/components/seo/JsonLd';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -132,9 +133,12 @@ export default async function NewsArticlePage(props: PageProps) {
         {/* Featured Image */}
         {article.image_url && (
           <div className="rounded-[24px] overflow-hidden mb-12 shadow-sm border border-gray-100 bg-white">
-            <img 
+            <Image 
               src={article.image_url} 
               alt={article.title} 
+              width={1200}
+              height={500}
+              sizes="(max-width: 1024px) 100vw, 1200px"
               className="w-full h-auto max-h-[500px] object-cover"
             />
           </div>

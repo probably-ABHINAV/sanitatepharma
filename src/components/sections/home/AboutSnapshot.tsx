@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
 
 export function AboutSnapshot() {
   const points = [
@@ -28,10 +29,12 @@ export function AboutSnapshot() {
             className="relative aspect-[4/3] rounded-card overflow-hidden bg-gray-100 border border-gray-200"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 mix-blend-multiply" />
-            <img 
+            <Image 
               src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&q=90&w=1200" 
               alt="Advanced pharmaceutical manufacturing facility" 
-              className="w-full h-full object-cover relative z-0"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover relative z-0"
             />
           </motion.div>
 

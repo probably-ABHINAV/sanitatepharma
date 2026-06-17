@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { User } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { TeamMember } from '@/lib/types';
+import Image from 'next/image';
 
 // Inline SVG since lucide-react removed brand icons
 const LinkedinIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
@@ -57,10 +58,12 @@ export function LeadershipCard({ member }: { member: TeamMember }) {
         <div className="absolute inset-0 rounded-full border-2 border-teal scale-105 opacity-50 group-hover:scale-110 transition-transform duration-500" />
         <div className="w-full h-full rounded-full border-4 border-white shadow-md overflow-hidden bg-offWhite flex items-center justify-center relative z-10">
           {member.image_url ? (
-            <img 
+            <Image 
               src={member.image_url} 
               alt={member.name} 
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              fill
+              sizes="128px"
+              className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
           ) : (
             <User className="w-12 h-12 text-gray-300" />

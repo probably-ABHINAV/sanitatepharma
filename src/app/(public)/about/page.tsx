@@ -6,6 +6,7 @@ import { ShieldCheck, Heart, Users, Target, Lightbulb, CheckCircle2, Award } fro
 import { JsonLd } from '@/components/seo/JsonLd';
 import type { TeamMember } from '@/lib/types';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Our Story | Sanitatepharma',
@@ -76,10 +77,12 @@ export default async function AboutPage() {
             <ScrollFade direction="left">
               <div className="relative aspect-square sm:aspect-[4/3] rounded-[32px] overflow-hidden border border-gray-100 shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent z-10 mix-blend-multiply" />
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=90&w=1600" 
                   alt="Modern pharmaceutical facility" 
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </ScrollFade>
@@ -260,8 +263,8 @@ export default async function AboutPage() {
             {/* Right Image */}
             <ScrollFade direction="right">
               <div className="grid grid-cols-2 gap-4">
-                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=600" alt="Lab equipment" className="w-full h-48 object-cover rounded-[20px]" />
-                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=600" alt="Scientists in lab" className="w-full h-48 object-cover rounded-[20px] mt-8" />
+                <Image src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=600" alt="Lab equipment" width={600} height={400} className="w-full h-48 object-cover rounded-[20px]" />
+                <Image src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=600" alt="Scientists in lab" width={600} height={400} className="w-full h-48 object-cover rounded-[20px] mt-8" />
               </div>
             </ScrollFade>
           </div>

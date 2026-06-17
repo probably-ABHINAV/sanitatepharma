@@ -5,6 +5,7 @@ import { Plus, Edit2, Trash2 } from 'lucide-react';
 import { ProductDrawer } from '@/components/admin/ProductDrawer';
 import { createClient } from '@/lib/supabase/client';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export function ProductsClient({ initialProducts, categories }: { initialProducts: any[], categories: any[] }) {
   const [products, setProducts] = useState(initialProducts);
@@ -77,7 +78,15 @@ export function ProductsClient({ initialProducts, categories }: { initialProduct
                   <tr key={product.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       {product.images?.[0] ? (
-                        <img src={product.images[0]} alt={product.name} className="w-10 h-10 rounded-lg object-cover border border-gray-100" />
+                        <div className="w-10 h-10 relative">
+                          <Image 
+                            src={product.images[0]} 
+                            alt={product.name} 
+                            fill
+                            sizes="40px"
+                            className="rounded-lg object-cover border border-gray-100" 
+                          />
+                        </div>
                       ) : (
                         <div className="w-10 h-10 rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center">
                           <span className="text-gray-400 text-xs">No img</span>

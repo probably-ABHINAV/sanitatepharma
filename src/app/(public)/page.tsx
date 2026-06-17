@@ -2,9 +2,11 @@ import { createServiceClient } from '@/lib/supabase/server';
 import { Hero } from '@/components/sections/home/Hero';
 import { TrustMarquee } from '@/components/sections/home/TrustMarquee';
 import { AboutSnapshot } from '@/components/sections/home/AboutSnapshot';
-import { CategoryGrid } from '@/components/sections/home/CategoryGrid';
-import { FeaturedProducts } from '@/components/sections/home/FeaturedProducts';
-import { NewsGrid } from '@/components/sections/home/NewsGrid';
+import dynamic from 'next/dynamic';
+
+const CategoryGrid = dynamic(() => import('@/components/sections/home/CategoryGrid').then(mod => mod.CategoryGrid));
+const FeaturedProducts = dynamic(() => import('@/components/sections/home/FeaturedProducts').then(mod => mod.FeaturedProducts));
+const NewsGrid = dynamic(() => import('@/components/sections/home/NewsGrid').then(mod => mod.NewsGrid));
 import type { Product, Category, NewsArticle } from '@/lib/types';
 
 // Force dynamic rendering if we want fresh DB content each request, 

@@ -5,6 +5,7 @@ import { Plus, Edit2, Trash2 } from 'lucide-react';
 import { TeamDrawer } from '@/components/admin/TeamDrawer';
 import { createClient } from '@/lib/supabase/client';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export function TeamClient({ initialTeam }: { initialTeam: any[] }) {
   const [team, setTeam] = useState(initialTeam);
@@ -76,7 +77,15 @@ export function TeamClient({ initialTeam }: { initialTeam: any[] }) {
                   <tr key={member.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       {member.photo_url ? (
-                        <img src={member.photo_url} alt={member.name} className="w-10 h-10 rounded-full object-cover border border-gray-100" />
+                        <div className="w-10 h-10 relative">
+                          <Image 
+                            src={member.photo_url} 
+                            alt={member.name} 
+                            fill
+                            sizes="40px"
+                            className="rounded-full object-cover border border-gray-100" 
+                          />
+                        </div>
                       ) : (
                         <div className="w-10 h-10 rounded-full bg-tealPale text-teal font-bold flex items-center justify-center">
                           {member.name.charAt(0)}

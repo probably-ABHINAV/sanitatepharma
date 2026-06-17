@@ -1,6 +1,7 @@
 import { OpenPositions } from '@/components/careers/OpenPositions';
 import { Rocket, GraduationCap, MapPin, Heart, Users } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Careers | Sanitatepharma',
@@ -89,17 +90,17 @@ export default function CareersPage() {
           {/* Masonry Grid (CSS columns approach or complex grid) */}
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             {/* Pharma team collaboration */}
-            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=90&w=800" alt="Pharma team collaboration" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=90&w=800" alt="Pharma team collaboration" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
             {/* Scientist working in lab */}
-            <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=90&w=800" alt="Scientists in pharmaceutical laboratory" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=90&w=800" alt="Scientists in pharmaceutical laboratory" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
             {/* Corporate office strategy */}
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=90&w=800" alt="Corporate team strategy meeting" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=90&w=800" alt="Corporate team strategy meeting" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
             {/* Lab research */}
-            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=800" alt="Pharmaceutical research" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=90&w=800" alt="Pharmaceutical research" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
             {/* Quality control */}
-            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=800" alt="Quality control in lab" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=90&w=800" alt="Quality control in lab" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
             {/* Scientists collaborating */}
-            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=90&w=800" alt="Scientists collaborating on research" className="w-full rounded-[24px] shadow-sm break-inside-avoid" />
+            <Image src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=90&w=800" alt="Scientists collaborating on research" width={800} height={533} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="w-full h-auto rounded-[24px] shadow-sm break-inside-avoid" />
           </div>
         </div>
       </section>

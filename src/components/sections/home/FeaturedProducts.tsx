@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 import type { Product } from '@/lib/types';
+import Image from 'next/image';
 
 export function FeaturedProducts({ products }: { products: Product[] }) {
   // Use DB products or fallback
@@ -70,8 +71,13 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
               {/* Image area */}
               <div className="aspect-[4/3] bg-offWhite relative border-b border-gray-100 flex items-center justify-center overflow-hidden">
                 {product.images && product.images.length > 0 ? (
-                  /* Note: standard img tag used for placeholder flexibility, update to next/image for production */
-                  <img src={product.images[0]} alt={product.name} className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
+                  <Image 
+                    src={product.images[0]} 
+                    alt={product.name} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" 
+                  />
                 ) : (
                   <div className="flex flex-col items-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
                     <ImageIcon className="w-10 h-10 mb-2 opacity-50" />

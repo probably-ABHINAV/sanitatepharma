@@ -5,6 +5,7 @@ import { X, Upload, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export function NewsDrawer({ 
   open, 
@@ -148,9 +149,10 @@ export function NewsDrawer({
                 <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 overflow-hidden relative">
                   {image || article?.image_url ? (
                     <div className="absolute inset-0 w-full h-full">
-                      <img 
+                      <Image 
                         src={image ? URL.createObjectURL(image) : article.image_url} 
-                        className="w-full h-full object-cover opacity-50"
+                        fill
+                        className="object-cover opacity-50"
                         alt="Cover preview"
                       />
                       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30">

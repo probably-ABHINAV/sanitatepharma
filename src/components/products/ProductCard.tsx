@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 import type { Product } from '@/lib/types';
+import Image from 'next/image';
 
 export function ProductCard({ product }: { product: Product }) {
   const isRx = product.prescription_type === 'rx';
@@ -19,10 +20,12 @@ export function ProductCard({ product }: { product: Product }) {
       {/* Image Container */}
       <div className="h-[140px] sm:h-[200px] w-full bg-white border-b border-gray-50 flex items-center justify-center p-3 sm:p-6 relative overflow-hidden">
         {product.images && product.images.length > 0 ? (
-          <img 
+          <Image 
             src={product.images[0]} 
-            alt={product.name} 
-            className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" 
+            alt={`${product.name} packaging`} 
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500 p-2" 
           />
         ) : (
           <div className="flex flex-col items-center text-gray-300 group-hover:scale-105 transition-transform duration-500">

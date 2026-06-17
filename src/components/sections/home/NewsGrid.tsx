@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar } from 'lucide-react';
 import type { NewsArticle } from '@/lib/types';
+import Image from 'next/image';
 
 export function NewsGrid({ news }: { news: NewsArticle[] }) {
   // Use DB news or fallback
@@ -75,7 +76,13 @@ export function NewsGrid({ news }: { news: NewsArticle[] }) {
             >
               <div className="aspect-video bg-gray-200 relative overflow-hidden">
                 {article.image_url ? (
-                  <img src={article.image_url} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image 
+                    src={article.image_url} 
+                    alt={article.title || 'News image'} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                  />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-primary/5 to-teal/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                     <span className="font-display font-bold text-primary/20 text-2xl">News</span>

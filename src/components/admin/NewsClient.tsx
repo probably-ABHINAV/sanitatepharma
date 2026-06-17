@@ -5,6 +5,7 @@ import { Plus, Edit2, Trash2, Calendar } from 'lucide-react';
 import { NewsDrawer } from './NewsDrawer';
 import { createClient } from '@/lib/supabase/client';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export function NewsClient({ initialNews }: { initialNews: any[] }) {
   const [news, setNews] = useState(initialNews);
@@ -75,7 +76,15 @@ export function NewsClient({ initialNews }: { initialNews: any[] }) {
                   <tr key={article.id} className="hover:bg-gray-50 transition-colors">
                     <td className="px-6 py-4">
                       {article.image_url ? (
-                        <img src={article.image_url} alt={article.title} className="w-12 h-10 rounded object-cover border border-gray-100" />
+                        <div className="w-12 h-10 relative">
+                          <Image 
+                            src={article.image_url} 
+                            alt={article.title} 
+                            fill
+                            sizes="48px"
+                            className="rounded object-cover border border-gray-100" 
+                          />
+                        </div>
                       ) : (
                         <div className="w-12 h-10 rounded bg-gray-100 border border-gray-200 flex items-center justify-center">
                           <span className="text-[10px] font-medium text-gray-400">No Img</span>
