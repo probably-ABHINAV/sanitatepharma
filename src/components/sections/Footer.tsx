@@ -211,7 +211,7 @@ export function Footer() {
       {/* ─── Bottom Bar ─── */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40 text-center sm:text-left">
+          <p className="text-xs text-white/70 text-center sm:text-left">
             © {new Date().getFullYear()} {SITE_NAME} Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6">
@@ -223,7 +223,7 @@ export function Footer() {
               <span key={link.href} className="flex items-center gap-4 sm:gap-6">
                 <Link
                   href={link.href}
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors"
+                  className="text-xs text-white/70 hover:text-white/90 transition-colors"
                 >
                   {link.label}
                 </Link>

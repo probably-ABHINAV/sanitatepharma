@@ -79,7 +79,7 @@ export function AboutSnapshot() {
                 href="/about"
                 className="group inline-flex items-center gap-2 text-teal font-semibold uppercase tracking-wider text-sm hover:text-primary transition-colors duration-300"
               >
-                Learn More
+                Learn More About Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
