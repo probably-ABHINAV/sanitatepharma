@@ -1,5 +1,6 @@
 import { Timeline } from '@/components/manufacturing/Timeline';
 import { ManufacturingForm } from '@/components/manufacturing/ManufacturingForm';
+import { SeoArticle } from '@/components/manufacturing/SeoArticle';
 import { AnimatedCounter } from '@/components/about/AnimatedCounter';
 import { FileDown, MessageSquare, ShieldCheck, CheckCircle2, Factory, Package, Syringe, TestTube, Truck } from 'lucide-react';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -100,7 +101,7 @@ export default function ContractManufacturingPage() {
             B2B Manufacturing Partner
           </span>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-white mb-6 leading-[1.1] max-w-4xl mx-auto">
-            Your Trusted Contract Manufacturing Partner
+            Third Party Pharma Contract Manufacturing
           </h1>
           <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
             GMP-certified · Custom formulations · Scalable capacity
@@ -207,6 +208,8 @@ export default function ContractManufacturingPage() {
           <Timeline />
         </div>
       </section>
+
+      <SeoArticle />
 
       {/* ── ENQUIRY FORM ── */}
       <section className="py-24 bg-offWhite border-t border-gray-100" id="enquire">
