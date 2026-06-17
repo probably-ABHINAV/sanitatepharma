@@ -20,14 +20,14 @@ export function NewsGrid({ news }: { news: NewsArticle[] }) {
       id: '2', title: 'Launch of 50 New Formulations',
       slug: 'launch-50-new-formulations',
       excerpt: 'Sanitatepharma announces the successful rollout of its initial portfolio of 50 high-quality medicines.',
-      published_at: new Date(Date.now() - 86400000 * 5).toISOString(),
+      published_at: '2026-06-10T10:00:00.000Z',
       status: 'published', content: '', image_url: null
     },
     {
       id: '3', title: 'Launch of New Cardiovascular Range',
       slug: 'new-cardiovascular-range',
       excerpt: 'Introducing advanced formulations for the management of hypertension and heart diseases.',
-      published_at: new Date(Date.now() - 86400000 * 12).toISOString(),
+      published_at: '2026-06-05T10:00:00.000Z',
       status: 'published', content: '', image_url: null
     },
   ] as NewsArticle[];

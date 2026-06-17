@@ -135,7 +135,7 @@ export function ProductsClient({ initialProducts, categories }: { initialProduct
               ) : (
                 <tr>
                   <td colSpan={6} className="px-6 py-12 text-center text-textMid">
-                    No products found. Click "Add Product" to create one.
+                    No products found. Click &quot;Add Product&quot; to create one.
                   </td>
                 </tr>
               )}

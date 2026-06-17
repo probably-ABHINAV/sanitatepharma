@@ -25,6 +25,7 @@ export async function GET() {
     const products = (productsData || []) as Product[];
 
     // Render the PDF to a Node.js stream
+    // eslint-disable-next-line
     const stream = await renderToStream(<CatalogDocument products={products} />);
 
     // Create a standard Web stream from the Node.js stream to pass to NextResponse

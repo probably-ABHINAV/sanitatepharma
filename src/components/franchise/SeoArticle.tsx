@@ -18,7 +18,7 @@ export function SeoArticle() {
           We believe in making the pharmaceutical business accessible while ensuring our partners have the working capital necessary to maintain stock and serve their local doctors efficiently. This investment covers your initial product inventory, promotional materials, and the administrative setup required to get your business off the ground.
         </p>
         <p>
-          By maintaining a reasonable investment threshold, we empower entrepreneurs to start their journey without overwhelming financial pressure. We provide complete transparency on cost structures, ensuring you know exactly where every rupee goes. If you are ready to learn more about our company\'s mission and stability, you can read more <Link href="/about" className="text-teal font-semibold hover:underline">about us</Link>.
+          By maintaining a reasonable investment threshold, we empower entrepreneurs to start their journey without overwhelming financial pressure. We provide complete transparency on cost structures, ensuring you know exactly where every rupee goes. If you are ready to learn more about our company&apos;s mission and stability, you can read more <Link href="/about" className="text-teal font-semibold hover:underline">about us</Link>.
         </p>
 
         <h2 className="text-3xl font-display font-bold text-primary mt-12 mb-6">

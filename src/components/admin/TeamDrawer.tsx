@@ -13,7 +13,7 @@ export function TeamDrawer({
 }: { 
   open: boolean; 
   onOpenChange: (open: boolean) => void;
-  member?: any;
+  member?: Record<string, any>;
 }) {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -72,8 +72,8 @@ export function TeamDrawer({
       toast.success(member ? 'Team member updated successfully' : 'Team member added successfully');
       onOpenChange(false);
       window.location.reload(); 
-    } catch (error: any) {
-      toast.error(`Error: ${error.message}`);
+    } catch (error) {
+      toast.error(`Error: ${(error as Error).message}`);
     } finally {
       setLoading(false);
     }

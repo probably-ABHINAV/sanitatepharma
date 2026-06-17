@@ -26,6 +26,7 @@ export function AnimatedCounter({ value, label, prefix = '', suffix = '' }: Anim
   useEffect(() => {
     if (inView && !hasAnimated) {
       motionValue.set(value);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHasAnimated(true);
     }
   }, [inView, motionValue, value, hasAnimated]);

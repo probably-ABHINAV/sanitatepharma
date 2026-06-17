@@ -151,13 +151,13 @@ export default async function ProductsPage(props: {
 
             {/* Mobile-only Filters (horizontal scroll pills) */}
             <div className="lg:hidden flex gap-2 overflow-x-auto pb-3 mb-4 scrollbar-none">
-              <a href="/products" className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
+              <Link href="/products" className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
                 !categoryParam ? 'bg-teal text-white border-teal' : 'bg-white text-textMid border-gray-200 hover:border-teal'
-              }`}>All</a>
+              }`}>All</Link>
               {(categories || []).map((cat: Category) => (
-                <a key={cat.id} href={`/products?category=${cat.slug}`} className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
+                <Link key={cat.id} href={`/products?category=${cat.slug}`} className={`shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-colors ${
                   categoryParam === cat.slug ? 'bg-teal text-white border-teal' : 'bg-white text-textMid border-gray-200 hover:border-teal'
-                }`}>{cat.name}</a>
+                }`}>{cat.name}</Link>
               ))}
             </div>
 
@@ -182,7 +182,7 @@ export default async function ProductsPage(props: {
                 </div>
                 <h3 className="font-display text-2xl font-bold text-primary mb-2">No products found</h3>
                 <p className="text-textMid mb-8 max-w-md">
-                  We couldn't find any products matching your current filters. Try adjusting your search or clearing some filters.
+                  We couldn&apos;t find any products matching your current filters. Try adjusting your search or clearing some filters.
                 </p>
                 {hasFilters && (
                   <Link 

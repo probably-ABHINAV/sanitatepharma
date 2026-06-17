@@ -19,40 +19,27 @@ export function Hero() {
           
           {/* Left: Content */}
           <div className="lg:col-span-7 pt-4 lg:pt-0 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            >
+            <div>
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-tealPale text-teal text-xs font-semibold uppercase tracking-wider rounded-full mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                 India&apos;s Trusted Pharma Partner
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+            <h1
               className="font-display text-[38px] sm:text-5xl lg:text-[60px] font-extrabold text-primary leading-[1.05] tracking-tight mb-5"
             >
               Quality Medicine,<br />
               <span className="text-teal">Every Life, Every Day</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            <p
               className="text-textMid text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
               Sanitate Pharma delivers affordable, high-quality pharmaceuticals across India through 50,000+ stockists.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            <div
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10"
             >
               <Link
@@ -68,7 +55,7 @@ export function Hero() {
               >
                 Partner With Us
               </Link>
-            </motion.div>
+            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">

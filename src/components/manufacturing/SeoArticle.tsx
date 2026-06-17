@@ -5,7 +5,7 @@ export function SeoArticle() {
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-teal">
         <p className="lead text-xl text-textMid mb-8">
-          Welcome to Sanitatepharma, India's premier destination for high-quality <strong>third party pharma contract manufacturing</strong>. Whether you are a marketing company looking to outsource production or an established brand scaling up, we offer seamless end-to-end manufacturing solutions. Below, we answer the most common questions our B2B partners ask.
+          Welcome to Sanitatepharma, India&apos;s premier destination for high-quality <strong>third party pharma contract manufacturing</strong>. Whether you are a marketing company looking to outsource production or an established brand scaling up, we offer seamless end-to-end manufacturing solutions. Below, we answer the most common questions our B2B partners ask.
         </p>
 
         <h2 className="text-3xl font-display font-bold text-primary mt-12 mb-6">
@@ -60,7 +60,7 @@ export function SeoArticle() {
           The official phone number for contract manufacturing enquiries is: <strong>[NEED: phone number]</strong>.
         </p>
         <p>
-          You can reach out to us during business hours to speak directly with an expert. Alternatively, you can use the enquiry form at the bottom of this page or visit our <Link href="/contact" className="text-teal font-semibold hover:underline">contact page</Link>. Let Sanitatepharma be the reliable manufacturing engine behind your brand's success!
+          You can reach out to us during business hours to speak directly with an expert. Alternatively, you can use the enquiry form at the bottom of this page or visit our <Link href="/contact" className="text-teal font-semibold hover:underline">contact page</Link>. Let Sanitatepharma be the reliable manufacturing engine behind your brand&apos;s success!
         </p>
       </div>
     </section>

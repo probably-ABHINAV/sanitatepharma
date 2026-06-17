@@ -12,6 +12,7 @@ export function PageLoader() {
     // Check if it's the first visit in this session
     const hasVisited = sessionStorage.getItem('hasVisitedSanitatepharma');
     if (!hasVisited) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShow(true);
       sessionStorage.setItem('hasVisitedSanitatepharma', 'true');
       
