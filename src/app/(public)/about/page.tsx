@@ -157,11 +157,10 @@ export default async function AboutPage() {
       {/* ── KEY NUMBERS ── */}
       <section className="py-20 bg-tealPale border-y border-teal/10">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 divide-x-0 lg:divide-x divide-teal/20">
-            <AnimatedCounter value={500} suffix="+" label="Products" />
-            <AnimatedCounter value={15} suffix="+" label="Years of Excellence" />
-            <AnimatedCounter value={50000} suffix="+" label="Stockists" />
-            <AnimatedCounter value={25} suffix="+" label="States Covered" />
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8 divide-x-0 lg:divide-x divide-teal/20">
+            <AnimatedCounter value={50} suffix="+" label="Products" />
+            <AnimatedCounter value={1} suffix="" label="Years of Excellence" />
+            <AnimatedCounter value={10000} suffix="+" label="Healthcare Partners" />
           </div>
         </div>
       </section>

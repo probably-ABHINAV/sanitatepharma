@@ -25,8 +25,7 @@ const REASONS = [
   {
     icon: <TrendingUp className="w-6 h-6" />,
     title: 'Pan-India Reach',
-    description:
-      'Distribution network spanning all 28 states with 10,000+ healthcare partners ensuring last-mile delivery.',
+    description: 'Distribution network with 10,000+ healthcare partners ensuring last-mile delivery.',
   },
 ];
 

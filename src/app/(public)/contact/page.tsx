@@ -16,7 +16,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-radial from-teal/20 to-transparent opacity-50" />
         <div className="max-w-[1000px] mx-auto px-4 text-center relative z-10">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-[64px] font-extrabold text-white mb-6 leading-[1.1]">
-            Let's Talk
+            Let&apos;s Talk
           </h1>
           <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
             We are always open to hearing from customers, prospective distributors, manufacturing partners, and job seekers.

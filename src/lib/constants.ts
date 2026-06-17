@@ -48,7 +48,6 @@ export const FOOTER_COMPANY_LINKS = [
   { label: 'Leadership', href: '/about#leadership' },
   { label: 'Manufacturing', href: '/about#manufacturing' },
   { label: 'Quality Standards', href: '/about#quality' },
-  { label: 'News & Media', href: '/about#news' },
 ] as const;
 
 export const FOOTER_PRODUCT_LINKS = [
@@ -74,7 +73,6 @@ export const ENQUIRY_TYPES = [
 export const COMPANY_STATS = [
   { value: '50', label: 'Products' },
   { value: '10,000+', label: 'Healthcare Partners' },
-  { value: '28', label: 'States Covered' },
 ] as const;
 
 // ─── Company Contact Info ───

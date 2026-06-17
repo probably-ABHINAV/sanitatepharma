@@ -5,11 +5,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
-const stats = [
-  { value: '50', label: 'Products' },
-  { value: '28', label: 'States Covered' },
-  { value: '50,000+', label: 'Stockists' },
-];
 
 export function Hero() {
   return (
@@ -19,7 +14,7 @@ export function Hero() {
           
           {/* Left: Content */}
           <div className="lg:col-span-7 pt-4 lg:pt-0 text-center lg:text-left">
-            <div>
+            <div className="animate-fade-up" style={{ animationDelay: '100ms' }}>
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-tealPale text-teal text-xs font-semibold uppercase tracking-wider rounded-full mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                 India&apos;s Trusted Pharma Partner
@@ -27,20 +22,23 @@ export function Hero() {
             </div>
 
             <h1
-              className="font-display text-[38px] sm:text-5xl lg:text-[60px] font-extrabold text-primary leading-[1.05] tracking-tight mb-5"
+              className="font-display text-[38px] sm:text-5xl lg:text-[60px] font-extrabold text-primary leading-[1.05] tracking-tight mb-5 animate-fade-up"
+              style={{ animationDelay: '200ms' }}
             >
               Quality Medicine,<br />
               <span className="text-teal">Every Life, Every Day</span>
             </h1>
 
             <p
-              className="text-textMid text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+              className="text-textMid text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-fade-up"
+              style={{ animationDelay: '300ms' }}
             >
               Sanitate Pharma delivers affordable, high-quality pharmaceuticals across India through 50,000+ stockists.
             </p>
 
             <div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10 animate-fade-up"
+              style={{ animationDelay: '400ms' }}
             >
               <Link
                 href="/products"
@@ -57,25 +55,7 @@ export function Hero() {
               </Link>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + i * 0.1, ease: [0.4, 0, 0.2, 1] }}
-                  className="text-center lg:text-left"
-                >
-                  <p className="font-display text-xl sm:text-2xl lg:text-3xl font-extrabold text-primary mb-1">
-                    {stat.value}
-                  </p>
-                  <p className="text-textMid text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+
           </div>
 
           {/* Right: Image — hidden on small screens */}

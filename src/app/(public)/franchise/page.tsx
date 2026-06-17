@@ -104,7 +104,7 @@ export default function FranchisePage() {
                 Start Your PCD Pharma Franchise With Sanitatepharma
               </h1>
               <p className="text-white/80 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed">
-                Join India's fastest-growing pharmaceutical franchise network. Secure monopoly rights in your district and build a highly profitable business with our WHO-GMP certified product range.
+                Join India&apos;s fastest-growing pharmaceutical franchise network. Secure monopoly rights in your district and build a highly profitable business with our premium product range.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4">
