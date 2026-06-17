@@ -19,7 +19,6 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Leadership Team', href: '/about#leadership' },
       { label: 'Manufacturing', href: '/about#manufacturing' },
       { label: 'Quality Standards', href: '/about#quality' },
-      { label: 'Awards & Milestones', href: '/about#awards' },
     ],
   },
   {
@@ -49,7 +48,6 @@ export const FOOTER_COMPANY_LINKS = [
   { label: 'Leadership', href: '/about#leadership' },
   { label: 'Manufacturing', href: '/about#manufacturing' },
   { label: 'Quality Standards', href: '/about#quality' },
-  { label: 'Awards', href: '/about#awards' },
   { label: 'News & Media', href: '/about#news' },
 ] as const;
 
@@ -74,8 +72,7 @@ export const ENQUIRY_TYPES = [
 // ─── Company Stats ───
 
 export const COMPANY_STATS = [
-  { value: '500+', label: 'Products' },
-  { value: '25+', label: 'Years Experience' },
+  { value: '50', label: 'Products' },
   { value: '10,000+', label: 'Healthcare Partners' },
   { value: '28', label: 'States Covered' },
 ] as const;

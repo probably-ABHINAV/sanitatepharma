@@ -43,7 +43,7 @@ export function ProductsPreview() {
             transition={{ delay: 0.2 }}
             className="text-textMid max-w-lg mx-auto"
           >
-            500+ formulations across critical therapeutic areas, manufactured with the highest quality standards.
+            50 formulations across critical therapeutic areas, manufactured with the highest quality standards.
           </motion.p>
         </div>
 

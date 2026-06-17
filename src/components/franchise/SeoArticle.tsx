@@ -5,7 +5,7 @@ export function SeoArticle() {
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-teal">
         <p className="lead text-xl text-textMid mb-8">
-          Welcome to Sanitatepharma, your trusted partner for launching a successful <strong>PCD pharma franchise</strong> in India. If you are looking to enter the pharmaceutical sector or expand your existing distribution network, we offer an incredible opportunity to grow with a WHO-GMP certified company. Below, we answer the most common questions our prospective franchise partners ask.
+          Welcome to Sanitatepharma, your trusted partner for launching a successful <strong>PCD pharma franchise</strong> in India. If you are looking to enter the pharmaceutical sector or expand your existing distribution network, we offer an incredible opportunity to grow with a modern, high-quality manufacturing company. Below, we answer the most common questions our prospective franchise partners ask.
         </p>
 
         <h2 className="text-3xl font-display font-bold text-primary mt-12 mb-6">
@@ -35,7 +35,7 @@ export function SeoArticle() {
           Which product categories are available for franchise?
         </h2>
         <p>
-          A strong product portfolio is the backbone of any successful pharma franchise. We manufacture a wide range of high-quality, WHO-GMP certified medications. The specific product categories actually available for our franchise partners include: <strong>[NEED: product categories]</strong>.
+          A strong product portfolio is the backbone of any successful pharma franchise. We manufacture a wide range of high-quality, rigorous-tested medications. The specific product categories actually available for our franchise partners include: <strong>[NEED: product categories]</strong>.
         </p>
         <p>
           From general medicines to specialized therapeutic segments, our catalog is designed to meet the diverse demands of the Indian healthcare market. Every product undergoes strict quality control checks, ensuring high efficacy and safety. By partnering with us, you gain access to a reliable supply chain that ensures you never face stock-outs. To see a broader view of what we manufacture, you can explore our complete <Link href="/products" className="text-teal font-semibold hover:underline">product catalog</Link>.

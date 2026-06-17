@@ -6,7 +6,6 @@ import { ArrowRight, Settings, ShieldCheck, Microscope, PackageCheck } from 'luc
 
 const stats = [
   { icon: <Settings className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'State-of-the-art Machinery' },
-  { icon: <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'WHO-GMP Compliant' },
   { icon: <Microscope className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Advanced QA/QC Labs' },
   { icon: <PackageCheck className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Timely Delivery' },
 ];
@@ -54,7 +53,7 @@ export function ContractManufacturing() {
               Excellence in Contract Manufacturing
             </h2>
             <p className="text-textMid text-sm sm:text-base leading-relaxed mb-8">
-              Sanitatepharma provides reliable, high-quality third-party manufacturing services. Our WHO-GMP certified facilities are equipped to handle large-scale production across various therapeutic categories with stringent quality control at every step.
+              Sanitatepharma provides reliable, high-quality third-party manufacturing services. Our facilities are equipped to handle large-scale production across various therapeutic categories with stringent quality control at every step.
             </p>
             
             <Link

@@ -93,13 +93,6 @@ export function Footer() {
               ))}
             </div>
 
-            {/* Certification Badge */}
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 w-fit">
-              <ShieldCheck className="w-4 h-4 text-tealLight flex-shrink-0" />
-              <span className="text-[11px] font-medium text-white/70 uppercase tracking-wider">
-                ISO 9001:2015 Certified
-              </span>
-            </div>
           </motion.div>
 
           {/* ─── Column 2: Company ─── */}

@@ -1,20 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Award, Factory, Users, TrendingUp } from 'lucide-react';
+import { ShieldCheck, Factory, Users, TrendingUp } from 'lucide-react';
 
 const REASONS = [
   {
     icon: <Factory className="w-6 h-6" />,
-    title: 'WHO-GMP Manufacturing',
+    title: 'Modern Manufacturing',
     description:
-      'State-of-the-art manufacturing facilities with international quality certifications and rigorous testing protocols.',
+      'State-of-the-art manufacturing facilities with modern equipment and rigorous testing protocols.',
   },
   {
-    icon: <Award className="w-6 h-6" />,
+    icon: <ShieldCheck className="w-6 h-6" />,
     title: 'Quality Assurance',
     description:
-      'Every batch undergoes 200+ quality tests. ISO 9001:2015 certified processes ensure consistent, reliable products.',
+      'Every batch undergoes strict quality control tests to ensure consistent, reliable, and effective products.',
   },
   {
     icon: <Users className="w-6 h-6" />,

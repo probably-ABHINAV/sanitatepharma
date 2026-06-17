@@ -19,7 +19,7 @@ const STEPS = [
     id: 3,
     title: 'Regulatory Support',
     time: 'As needed',
-    desc: 'Assistance with required documentation and DCGI approvals.',
+    desc: 'Assistance with required documentation and regulatory approvals.',
     icon: <FileCheck2 className="w-5 h-5" />
   },
   {
@@ -33,7 +33,7 @@ const STEPS = [
     id: 5,
     title: 'Commercial Production',
     time: 'Timeline varies',
-    desc: 'Full-scale manufacturing in our WHO-GMP certified facilities.',
+    desc: 'Full-scale manufacturing in our modern, state-of-the-art facilities.',
     icon: <Factory className="w-5 h-5" />
   },
   {

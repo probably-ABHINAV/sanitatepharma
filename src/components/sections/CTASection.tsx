@@ -47,7 +47,7 @@ export function CTASection() {
               Contract Manufacturing
             </h3>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
-              Leverage our WHO-GMP certified facilities for third-party manufacturing with end-to-end quality assurance.
+              Leverage our modern manufacturing facilities for third-party manufacturing with end-to-end quality assurance.
             </p>
             <Link
               href="/contract-manufacturing"

@@ -38,15 +38,7 @@ export function SeoArticle() {
           This timeline covers everything from the procurement of premium Active Pharmaceutical Ingredients (APIs) to the final dispatch of the finished, packaged goods. We maintain complete transparency throughout the production cycle so you always know the exact status of your inventory.
         </p>
 
-        <h2 className="text-3xl font-display font-bold text-primary mt-12 mb-6">
-          What certifications does your manufacturing facility hold?
-        </h2>
-        <p>
-          Quality and compliance are the foundation of Sanitatepharma. Our manufacturing facilities strictly adhere to international quality standards. We proudly hold a <strong>WHO-GMP Certificate, ISO 9001:2015 certification, and DCGI License</strong>.
-        </p>
-        <p>
-          These certifications are a testament to our commitment to safe, sterile, and highly effective pharmaceutical production. We continuously upgrade our technology and train our staff to exceed regulatory guidelines. You can learn more about our commitment to excellence on our <Link href="/about" className="text-teal font-semibold hover:underline">about us</Link> page.
-        </p>
+
 
         <h2 className="text-3xl font-display font-bold text-primary mt-12 mb-6">
           Do you offer packaging design services?

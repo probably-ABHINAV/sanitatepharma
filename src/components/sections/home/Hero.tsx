@@ -6,8 +6,8 @@ import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const stats = [
-  { value: '500+', label: 'Products' },
-  { value: '15+', label: 'Years' },
+  { value: '50', label: 'Products' },
+  { value: '28', label: 'States Covered' },
   { value: '50,000+', label: 'Stockists' },
 ];
 

@@ -25,8 +25,8 @@ export function AboutPreview() {
               <span className="text-teal">Healthcare in India</span>
             </h2>
             <p className="text-textMid text-base leading-relaxed mb-6">
-              For over 25 years, Sanitatepharma has been at the forefront of India&apos;s pharmaceutical industry. 
-              With WHO-GMP certified manufacturing facilities and a portfolio of 500+ products, we are 
+              Founded in January 2026, Sanitatepharma is rapidly emerging in India&apos;s pharmaceutical industry. 
+              With modern manufacturing facilities and a portfolio of 50 products, we are 
               dedicated to making quality healthcare accessible to every Indian.
             </p>
 
@@ -77,8 +77,8 @@ export function AboutPreview() {
                       </div>
                     </div>
                   </div>
-                  <p className="font-display text-lg font-bold text-primary">WHO-GMP Certified</p>
-                  <p className="text-textMid text-sm">Manufacturing Excellence</p>
+                  <p className="font-display text-lg font-bold text-primary">Manufacturing Excellence</p>
+                  <p className="text-textMid text-sm">Quality Healthcare Solutions</p>
                 </div>
               </div>
               {/* Decorative accent */}

@@ -1,13 +1,11 @@
 'use client';
 
 const items = [
-  "WHO-GMP Certified",
-  "ISO 9001:2015",
-  "FSSAI Approved",
-  "DCGI Licensed",
+  "High-Quality Formulations",
+  "Trusted by Doctors",
+  "Nationwide Delivery",
   "50,000+ Stockists",
-  "500+ Products",
-  "15+ Years of Excellence"
+  "50 Products",
 ];
 
 export function TrustMarquee() {

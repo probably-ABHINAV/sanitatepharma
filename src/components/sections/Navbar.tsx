@@ -361,7 +361,7 @@ function CompanyDropdown({ links }: { links: { label: string; href: string }[] }
             Accessible to All
           </p>
           <p className="text-xs text-textMid mt-2 leading-relaxed">
-            WHO-GMP certified manufacturing with 25+ years of pharma excellence.
+            High-quality manufacturing delivering pharmaceutical excellence since 2026.
           </p>
         </div>
       </div>

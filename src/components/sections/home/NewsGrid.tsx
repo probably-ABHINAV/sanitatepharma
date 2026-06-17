@@ -17,9 +17,9 @@ export function NewsGrid({ news }: { news: NewsArticle[] }) {
       status: 'published', content: '', image_url: null
     },
     {
-      id: '2', title: 'Awarded Best Emerging Pharma Company 2024',
-      slug: 'best-emerging-pharma-2024',
-      excerpt: 'Recognized for our commitment to quality and affordability at the National Pharma Awards.',
+      id: '2', title: 'Launch of 50 New Formulations',
+      slug: 'launch-50-new-formulations',
+      excerpt: 'Sanitatepharma announces the successful rollout of its initial portfolio of 50 high-quality medicines.',
       published_at: new Date(Date.now() - 86400000 * 5).toISOString(),
       status: 'published', content: '', image_url: null
     },
