@@ -14,6 +14,28 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.sanitatepharma.com"
   ),
+  openGraph: {
+    title: "Sanitate Pharma — India's Leading Pharmaceutical Company",
+    description: "Sanitate Pharma is committed to making quality healthcare accessible and affordable. Explore our pharmaceutical products, franchise opportunities, and contract manufacturing services.",
+    url: "https://www.sanitatepharma.com",
+    siteName: "Sanitatepharma Pvt. Ltd.",
+    locale: "en_IN",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: "ds81_FvtevmpGmOIhgHe0cX7G-wmLeJGTMT712OIIEw",
+  },
 };
 
 export default function RootLayout({
