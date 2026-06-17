@@ -14,31 +14,41 @@ export function Hero() {
           
           {/* Left: Content */}
           <div className="lg:col-span-7 pt-4 lg:pt-0 text-center lg:text-left">
-            <div className="animate-fade-up" style={{ animationDelay: '100ms' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-tealPale text-teal text-xs font-semibold uppercase tracking-wider rounded-full mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
                 India&apos;s Trusted Pharma Partner
               </span>
-            </div>
+            </motion.div>
 
-            <h1
-              className="font-display text-[38px] sm:text-5xl lg:text-[60px] font-extrabold text-primary leading-[1.05] tracking-tight mb-5 animate-fade-up"
-              style={{ animationDelay: '200ms' }}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+              className="font-display text-[38px] sm:text-5xl lg:text-[60px] font-extrabold text-primary leading-[1.05] tracking-tight mb-5"
             >
               Quality Medicine,<br />
               <span className="text-teal">Every Life, Every Day</span>
-            </h1>
+            </motion.h1>
 
-            <p
-              className="text-textMid text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-fade-up"
-              style={{ animationDelay: '300ms' }}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+              className="text-textMid text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
               Sanitate Pharma delivers affordable, high-quality pharmaceuticals across India through 50,000+ stockists.
-            </p>
+            </motion.p>
 
-            <div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10 animate-fade-up"
-              style={{ animationDelay: '400ms' }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-10"
             >
               <Link
                 href="/products"
@@ -53,7 +63,7 @@ export function Hero() {
               >
                 Partner With Us
               </Link>
-            </div>
+            </motion.div>
 
 
           </div>
